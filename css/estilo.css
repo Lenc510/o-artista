@@ -1,45 +1,279 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&display=swap');
-
-body {
-  font-family: 'Poppins';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Verdana", sans-serif;
 }
 
-header, #principal, #second, #contato, #stream {
-	
+body {
+  background-color: rgb(255, 255, 255);
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+#logo img {
+  width: 50px;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .link-menu {
-  color: #fff;
-  background-color: #555;
-}
-
-.f {
-  background-color: #5b305a;
-}
-
-.l {
-  background-color: #e49756;
-}
-
-.m {
-  background-color: #e04b5a;
-}
-
-main {
+  text-decoration: none;
+  color: white;
   background-color: #333;
-  color: #ddd;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-h1, h2 {
-  font-family: 'Amatic SC';
+.link-menu.f {
+  background-color: #4a2e53;
 }
 
-#second a{
-  color: #fff;
+.link-menu.l {
+  background-color: #e78b3a;
 }
 
+.link-menu.m {
+  background-color: #d95359;
+}
+
+/* Main genérico */
+main:not(.f):not(.l):not(.m) {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  padding: 50px 30px;
+}
+
+/* Mains específicos */
+main.f {
+  background-color: #4a2e53;
+  color: white;
+}
+
+main.l {
+  background-color: #e78b3a;
+  color: white;
+}
+
+main.m {
+  background-color: #d95359;
+  color: white;
+}
+
+/* Sessão principal */
+#principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+#principal figure img,
+.capa,
+#capa {
+  width: 280px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sec_ctd {
+  max-width: 600px;
+}
+
+#sec_ctd h1 {
+  font-family: serif;
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#sec_ctd p {
+  line-height: 1.6;
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* Segunda seção */
+#second {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.cartaz img {
+  width: 220px;
+  height: auto;
+  display: block;
+}
+
+/* Acesso */
+#acesso {
+  padding: 30px;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 15px;
+  min-width: 200px;
+  font-weight: bold;
+}
+
+#acesso.f {
+  background-color: #4a2e53;
+  color: white;
+}
+
+#acesso.f a {
+  display: block;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+}
+
+#acesso.l {
+  background-color: #e78b3a;
+  color: white;
+}
+
+#acesso.l a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#acesso.m {
+  background-color: #d95359;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+#acesso.m a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Descrição */
+#descricao {
+  background-color: white;
+  padding: 25px 35px;
+  border-radius: 10px;
+  min-width: 250px;
+  color: #333;
+}
+
+#descricao h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+iframe {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+/* Rodapé */
 footer {
   background-color: #333;
-  color: #ddd;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+#email {
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+#email a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#social a img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+/* Tipografia */
+p {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #principal {
+    background-color: #333;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #second {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #acesso,
+  #descricao {
+    width: 80%;
+  }
+
+  #menu {
+    flex-wrap: ;
+    justify-content: center;
+  }
+}
+
+#sec_ctd, #descricao {
+  position: relative;
+  padding-top: 40px; /* espaço para o título sem sobrepor texto */
+  padding-right: 50px; /* espaço para o título na borda direita */
+}
+
+#sec_ctd h1,
+#descricao h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 0 0 0 5px; /* arredonda só a borda inferior esquerda */
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}

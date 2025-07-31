@@ -1,1 +1,1 @@
-# o-artista
+Luick Eduardo Neres Costa
