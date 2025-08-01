@@ -1,10 +1,6 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: #333;
-}
-
-
-body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -15,7 +11,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  gap: 800px;
+  gap: 1200px;
 }
 
 #logo img {
@@ -32,21 +28,21 @@ nav ul {
 
 .link-menu {
   padding: 0.5rem 1rem;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
   background-color: #555;
 }
 
-.link-menu.f {
+.link-menu.f, .f {
   background-color: #5b305a;
 }
 
-.link-menu.l {
+.link-menu.l, .l {
   background-color: #e49756;
 }
 
-.link-menu.m {
+.link-menu.m, .m {
   background-color: #e04b5a;
 }
 
@@ -59,38 +55,27 @@ h1, h2 {
 main {
   padding: 2rem;
   background-color: #333;
-  color: white;
-}
-
-.f {
-  background-color: #5b305a;
-}
-
-.l {
-  background-color: #e49756;
-}
-
-.m {
-  background-color: #e04b5a;
+  color: #fff;
 }
 
 #principal {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
 #principal figure {
   margin: 0;
 }
 
-#principal img {
+#principal img,
+img {
   width: 300px;
   height: auto;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 #capa {
@@ -107,15 +92,16 @@ main.m #capa {
   width: 650px;
 }
 
-#sec_ctd p, #sec_ctd b {
+main.m #sec_ctd {
+  width: 550px;
+}
+
+#sec_ctd p,
+#sec_ctd b {
   font-size: 1rem;
   line-height: 1.6;
   max-width: 600px;
   text-align: justify;
-}
-
-main.m #sec_ctd {
-  width: 550px;
 }
 
 main.m #sec_ctd p {
@@ -130,15 +116,15 @@ main.m #sec_ctd p {
 
 #second {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  flex-wrap: wrap;
   padding: 2rem;
   background-color: #fff;
 }
 
 #descricao {
-  max-width: 700px;
+  max-width: 800px;
   padding: 1rem;
   background-color: #fff;
   border: 1px solid #eee;
@@ -149,7 +135,8 @@ main.m #sec_ctd p {
   margin-top: 0;
 }
 
-#descricao ol, #descricao ul {
+#descricao ol,
+#descricao ul {
   padding-left: 1.2rem;
 }
 
@@ -157,7 +144,7 @@ main.m #sec_ctd p {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
-  color: white;
+  color: #fff;
   font-weight: bold;
   text-align: center;
   margin-top: 1rem;
@@ -165,7 +152,7 @@ main.m #sec_ctd p {
 
 #acesso a {
   display: inline-block;
-  color: white;
+  color: #fff;
   margin: 0.5rem 0;
   text-decoration: none;
   font-size: 1rem;
@@ -211,19 +198,11 @@ footer {
   margin: 0 5px;
 }
 
-@media (max-width: 768px) {
-  #principal {
+@media (max-width: 1200px) {
+  #principal,
+  #second {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  #second {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-img {
-  border-radius: 0;
 }
